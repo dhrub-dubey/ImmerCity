@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { LocationProvider } from './context/LocationContext';
 import Header from './components/Header';
 import DrawerMenu from './components/DrawerMenu';
 import Hero from './components/Hero';
@@ -11,19 +12,21 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Header isMenuOpen={isMenuOpen} onMenuToggle={() => setIsMenuOpen(!isMenuOpen)} />
-      <DrawerMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+    <LocationProvider>
+      <div className="min-h-screen bg-gray-50">
+        <Header isMenuOpen={isMenuOpen} onMenuToggle={() => setIsMenuOpen(!isMenuOpen)} />
+        <DrawerMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
 
-      <main className="pt-16">
-        <Hero />
-        <Categories />
-        <GalleryBanner />
-        <NearbyPlaces />
-      </main>
+        <main className="pt-16">
+          <Hero />
+          <Categories />
+          <GalleryBanner />
+          <NearbyPlaces />
+        </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </LocationProvider>
   );
 }
 

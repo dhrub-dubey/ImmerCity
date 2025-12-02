@@ -14,10 +14,10 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center shadow-md">
-              <span className="text-white font-bold text-lg">IC</span>
+              <span className="text-white font-bold text-lg">H</span>
             </div>
             <span className="text-lg font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
-            Live the city’s hidden soul
+              Heritage Kolkata
             </span>
           </div>
 
@@ -39,7 +39,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-6 text-center text-sm text-gray-500">
-          © {currentYear} Chronos Shifters. All rights reserved.
+          © {currentYear} Heritage Kolkata. All rights reserved.
         </div>
       </div>
     </footer>
